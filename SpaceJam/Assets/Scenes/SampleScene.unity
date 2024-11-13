@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 812176503}
   m_Layer: 0
   m_Name: ugh
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -642,15 +642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9bc291087a0d84ca013eb0a2a25788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data: {fileID: 0}
-  _groundCheckPoint: {fileID: 0}
-  _groundCheckSize: {x: 0.49, y: 0.03}
-  _frontWallCheckPoint: {fileID: 0}
-  _backWallCheckPoint: {fileID: 0}
-  _wallCheckSize: {x: 0.5, y: 1}
-  _groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  Data: {fileID: 11400000, guid: 089fce8211a2c714e850ba1ac80c0e22, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
