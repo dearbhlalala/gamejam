@@ -6,13 +6,17 @@ public class PlayerMovement : MonoBehaviour
 {
     public PlayerDataWithDash Data;
 
-    public Rigidbody2D RB { get; private set;}
+    public Rigidbody2D RB { get; private set; }
 
     public bool IsFacingRight { get; private set; }
     public bool IsJumping { get; private set; }
     public bool IsDashing { get; private set; }
 
     public float LastOnGroundTime { get; private set; }
+    public float LastOnWallTime { get; private set; }
+    public float LastOnWallRightTime { get; private set; }
+    public float LastOnWallLeftTime { get; private set; }
+    public bool IsSliding { get; private set; }
 
     private bool _isJumpCut;
     private bool _isJumpFalling;
@@ -28,64 +32,18 @@ public class PlayerMovement : MonoBehaviour
 
     public float LastPressedJumpTime { get; private set; }
     public float LastPressedDashTime { get; private set; }
-    public object StartDash { get; private set; }
 
-    private Transform _groundCheckPoint;
-
-    private Vector2 _groundCheckSize = new Vector2(0.49f, 0.03f);
-    private Transform _frontWallCheckPoint;
-    private Transform _backWallCheckPoint;
-    private Vector2 _wallCheckSize = new Vector2(0.5f, 1f);
-    private Vector2 _wallCheckSize2 = new Vector2(1f, 1f);
-
-
-    private LayerMask _groundLayer;
-
-    //public float gravityStrength;
-    //public float gravityScale;
-
-    //public float fallGravityMult;
-    //public float maxFallSpeed;
-
-    //public float fastFallGravityMult;
-    //public float maxFastFallSpeed;
-
-    //public float runMaxSpeed;
-    //public float runAcceleration;
-    //public float runAccelAmount;
-    //public float runDecceleration;
-    //public float runDeccelAmount;
-
-    //public float accelInAir;
-    //public float deccelInAir;
-    //public bool doConserveMomentum = true;
-
-    //public float jumpHeight;
-    //public float jumpTimeToApex;
-    //public float jumpForce;
+    [Header("Checks")]
+    [SerializeField] private Transform _groundCheckPoint;
+    [Space(5)]
+    [SerializeField] private Vector2 _groundCheckSize = new Vector2(0.49f, 0.03f);
+    [SerializeField] private Transform _frontWallCheckPoint;
+    [SerializeField] private Transform _backWallCheckPoint;
+    [SerializeField] private Vector2 _wallCheckSize = new Vector2(0.5f, 1f);
 
 
-    //public float jumpCutGravityMult;
-    //public float jumpHangGravityMult;
-    //public float jumpHangTimeThreshold;
-    //public float jumpHangAccelerationMult;
-    //public float jumpHangMaxSpeedMult;
-
-    //public float coyoteTime;
-    //public float jumpInputBufferTime;
-
-    //public int dashAmount;
-    //public float dashSpeed;
-    //public float dashSleepTime;
-    //public float dashAttackTime;
-    //public float dashEndTime;
-    //public Vector2 dashEndSpeed;
-    //public float dashEndRunLerp;
-    //public float dashRefillTime;
-    //public float dashInputBufferTime;
-
-
-
+    [Header("Layers & Tags")]
+    [SerializeField] private LayerMask _groundLayer;
 
 
     private void Awake()
@@ -137,6 +95,18 @@ public class PlayerMovement : MonoBehaviour
             {
                 LastOnGroundTime = Data.coyoteTime;
             }
+
+            if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && IsFacingRight)
+        || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !IsFacingRight)))
+                LastOnWallRightTime = Data.coyoteTime;
+
+            //Right Wall Check
+            if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !IsFacingRight)
+                || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && IsFacingRight)))
+                LastOnWallLeftTime = Data.coyoteTime;
+
+            //Two checks needed for both left and right walls since whenever the play turns the wall checkPoints swap sides
+            LastOnWallTime = Mathf.Max(LastOnWallLeftTime, LastOnWallRightTime);
         }
 
 
@@ -164,6 +134,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (!_isDashAttacking)
         {
+            if (IsSliding)
+            {
+                SetGravityScale(0);
+            }
             if (RB.velocity.y < 0 && _moveInput.y < 0)
             {
                 SetGravityScale(Data.gravityScale * Data.fastFallGravityMult);
@@ -270,20 +244,20 @@ public class PlayerMovement : MonoBehaviour
         return _dashesLeft > 0;
     }
 
-    private void OnValidate()
-    {
-        Data.gravityStrength = -(2 * Data.jumpHeight) / (Data.jumpTimeToApex * Data.jumpTimeToApex);
+    //private void OnValidate()
+    //{
+    //    Data.gravityStrength = -(2 * Data.jumpHeight) / (Data.jumpTimeToApex * Data.jumpTimeToApex);
 
-        Data.gravityScale = Data.gravityStrength / Physics2D.gravity.y;
+    //    Data.gravityScale = Data.gravityStrength / Physics2D.gravity.y;
 
-        Data.runAccelAmount = (50 * Data.runAcceleration) / Data.runMaxSpeed;
-        Data.runDeccelAmount = (50 * Data.runDecceleration) / Data.runMaxSpeed;
+    //    Data.runAccelAmount = (50 * Data.runAcceleration) / Data.runMaxSpeed;
+    //    Data.runDeccelAmount = (50 * Data.runDecceleration) / Data.runMaxSpeed;
 
-        Data.jumpForce = Mathf.Abs(Data.gravityStrength) * Data.jumpTimeToApex;
+    //    Data.jumpForce = Mathf.Abs(Data.gravityStrength) * Data.jumpTimeToApex;
 
-        Data.runAcceleration = Mathf.Clamp(Data.runAcceleration, 0.01f, Data.runMaxSpeed);
-        Data.runDecceleration = Mathf.Clamp(Data.runDecceleration, 0.01f, Data.runMaxSpeed);
-    }
+    //    Data.runAcceleration = Mathf.Clamp(Data.runAcceleration, 0.01f, Data.runMaxSpeed);
+    //    Data.runDecceleration = Mathf.Clamp(Data.runDecceleration, 0.01f, Data.runMaxSpeed);
+    //}
 
     public void SetGravityScale(float scale)
     {
@@ -300,6 +274,39 @@ public class PlayerMovement : MonoBehaviour
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(duration);
         Time.timeScale = 1;
+    }
+
+    private IEnumerator StartDash(Vector2 dir)
+    {
+        LastOnGroundTime = 0;
+        LastPressedDashTime = 0;
+
+        float startTime = Time.time;
+
+        _dashesLeft--;
+        _isDashAttacking = true;
+
+        SetGravityScale(0);
+
+        while (Time.time - startTime <= Data.dashAttackTime)
+        {
+            RB.velocity = dir.normalized * Data.dashSpeed;
+            yield return null;
+        }
+
+        startTime = Time.time;
+
+        _isDashAttacking = false;
+
+        SetGravityScale(Data.gravityScale);
+        RB.velocity = Data.dashEndSpeed * dir.normalized;
+
+        while (Time.time - startTime <= Data.dashEndTime)
+        {
+            yield return null;
+        }
+
+        IsDashing = false;
     }
 
     private IEnumerator RefillDash(int amount)
