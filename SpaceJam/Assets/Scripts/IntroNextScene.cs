@@ -7,7 +7,7 @@ public class IntroNextScene : MonoBehaviour
 {
     void OnEnable()
     {
-        SceneManager.LoadScene("Dialogue", LoadSceneMode.Single);
+        SceneManager.LoadScene("starttest", LoadSceneMode.Single);
     }
     }
    
