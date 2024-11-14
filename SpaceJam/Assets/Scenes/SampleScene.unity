@@ -743,10 +743,10 @@ SpringJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
+  m_Anchor: {x: 0.018864524, y: 3.4103642}
   m_ConnectedAnchor: {x: -0.1, y: -13.4}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.005
+  m_Distance: 13.438531
   m_DampingRatio: 1
   m_Frequency: 1
 --- !u!1 &814207758
@@ -1248,7 +1248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grappleRope: {fileID: 1066060917}
   grappleToAll: 1
-  grappableLayerNumber: 7
+  grappableLayerNumber: 1
   m_camera: {fileID: 519420031}
   gunHolder: {fileID: 812176502}
   gunPivot: {fileID: 690506733}
@@ -1299,7 +1299,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.30187038, y: 0}
+  m_Offset: {x: -0.004281819, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1310,7 +1310,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.20306249, y: 1}
+  m_Size: {x: 1.0296737, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1682132452
 SpriteRenderer:
