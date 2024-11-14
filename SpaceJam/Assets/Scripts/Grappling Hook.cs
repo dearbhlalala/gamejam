@@ -30,12 +30,12 @@ public class GrapplingHook : MonoBehaviour
         Vector3 dir = (new Vector3(myPos.x + x, myPos.y + y, 0) - myPos).normalized;
         Debug.DrawLine(myPos, myPos + dir * 10, Color.red);
         //---------------------------------
-        if (Input.GetButtonDown("Jump")) // space is now grapple button
+        if (Input.GetButtonDown("Fire1")) // space is now grapple button
         {
             RaycastHit2D hit = Physics2D.Raycast(
             origin: myPos, //changed this 
             direction: dir, // and this
-            distance: Mathf.Infinity,
+            distance: 20,
             layerMask: grappleLayer);
  
             if(hit.collider !=null)
@@ -51,7 +51,7 @@ public class GrapplingHook : MonoBehaviour
             }
         }
  
-        if(Input.GetButtonUp("Jump")) // changed this input.
+        if(Input.GetButtonUp("Fire1")) // changed this input.
         {
            joint.enabled = false;
            rope.enabled = false;

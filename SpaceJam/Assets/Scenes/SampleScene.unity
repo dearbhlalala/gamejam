@@ -713,6 +713,7 @@ GameObject:
   - component: {fileID: 812176500}
   - component: {fileID: 812176504}
   - component: {fileID: 812176503}
+  - component: {fileID: 812176505}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -849,6 +850,26 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   rope: {fileID: 307339500}
+--- !u!232 &812176505
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812176497}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 13.4003725
+  m_MaxDistanceOnly: 0
 --- !u!1 &814207758
 GameObject:
   m_ObjectHideFlags: 0
