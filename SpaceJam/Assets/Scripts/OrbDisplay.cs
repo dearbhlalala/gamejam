@@ -22,6 +22,6 @@ public class OrbDisplay : MonoBehaviour
     public void ShowMessage(string message)
     {
         messageText.text = message;  
-        clearTextTimer = 2f;  
+        clearTextTimer = 3f;  
     }
 }
