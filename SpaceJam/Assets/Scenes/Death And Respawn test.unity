@@ -2700,7 +2700,7 @@ GameObject:
   - component: {fileID: 1493706152}
   - component: {fileID: 1493706151}
   - component: {fileID: 1493706154}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: KillPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
