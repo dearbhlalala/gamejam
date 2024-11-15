@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1e2845bccf2fac540a1f9078aa0dd36e
+guid: 467902ca800c2cb498a321c732d1e210
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: GalaxyBackground 320x180
+  - name: GalaxyBackgroundREWORK
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -130,9 +130,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 320
-      height: 180
-    spriteID: 1aaa26b6945178e49bb1c32eb85e6a61
+      width: 576
+      height: 324
+    spriteID: 0da7f8c4eb137de46917566b9203cd0a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,21 +144,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1434903874
-    name: GalaxyBackground 320x180
+    guid: -414800254
+    name: GalaxyBackgroundREWORK
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GalaxyBackground 320x180
+    - name: GalaxyBackgroundREWORK
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
-        width: 320
-        height: 180
-      spriteId: 1aaa26b6945178e49bb1c32eb85e6a61
+        width: 576
+        height: 324
+      spriteId: 0da7f8c4eb137de46917566b9203cd0a
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +177,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 320, y: 180}
+  canvasSize: {x: 576, y: 324}

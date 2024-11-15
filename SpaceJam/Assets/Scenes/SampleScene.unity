@@ -2144,27 +2144,6 @@ Transform:
   - {fileID: 1066060916}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &812176503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812176497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb9bc291087a0d84ca013eb0a2a25788, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Data: {fileID: 11400000, guid: 089fce8211a2c714e850ba1ac80c0e22, type: 2}
-  _groundCheckPoint: {fileID: 201235524}
-  _groundCheckSize: {x: 0.49, y: 0.03}
-  _frontWallCheckPoint: {fileID: 1170563408}
-  _backWallCheckPoint: {fileID: 1146136999}
-  _wallCheckSize: {x: 0.5, y: 1}
-  _groundLayer:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!114 &812176504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2190,7 +2169,7 @@ DistanceJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812176497}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 0}
@@ -2203,6 +2182,27 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 13.4003725
   m_MaxDistanceOnly: 0
+--- !u!114 &812176505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812176497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e746c854aac65884aae04446f04b22d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Data: {fileID: 11400000, guid: 089fce8211a2c714e850ba1ac80c0e22, type: 2}
+  _groundCheckPoint: {fileID: 201235524}
+  _groundCheckSize: {x: 0.49, y: 0.03}
+  _frontWallCheckPoint: {fileID: 1170563408}
+  _backWallCheckPoint: {fileID: 1146136999}
+  _wallCheckSize: {x: 0.5, y: 1}
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &814207758
 GameObject:
   m_ObjectHideFlags: 0
