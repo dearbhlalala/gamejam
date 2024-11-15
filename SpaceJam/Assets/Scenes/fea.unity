@@ -765,7 +765,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1296851022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb9bc291087a0d84ca013eb0a2a25788, type: 3}
+  m_Script: {fileID: 11500000, guid: e746c854aac65884aae04446f04b22d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 11400000, guid: 089fce8211a2c714e850ba1ac80c0e22, type: 2}
@@ -776,7 +776,7 @@ MonoBehaviour:
   _wallCheckSize: {x: 0.5, y: 1}
   _groundLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
 --- !u!50 &1296851025
 Rigidbody2D:
   serializedVersion: 4
@@ -885,6 +885,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   rope: {fileID: 383980625}
+  hookCooldown: 0
 --- !u!232 &1296851029
 DistanceJoint2D:
   m_ObjectHideFlags: 0
