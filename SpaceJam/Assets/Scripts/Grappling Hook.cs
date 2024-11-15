@@ -74,7 +74,7 @@ public class GrapplingHook : MonoBehaviour
 
     private IEnumerator ResetCooldown()
     {
-        yield return new WaitForSeconds(2); // Waits for 5 seconds
+        yield return new WaitForSeconds((float)1.3); // Waits for 5 seconds
         hookCooldown = false;
         Debug.Log("Cooldown Completed");
     }
