@@ -31,7 +31,7 @@ public class HealthManager : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.K))
         {
-            TakeDamage(10f);
+            TakeDamage(10);
         }
     }
 
