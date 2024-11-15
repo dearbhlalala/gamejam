@@ -540,8 +540,8 @@ MonoBehaviour:
     Space- To jump
 
 
-    Right Mouse
-    Click- To Grapple'
+    Ctrl(left)
+    - To Grapple'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aa7955b12791615419b024ba79edb296, type: 2}
   m_sharedMaterial: {fileID: -7011976685022766216, guid: aa7955b12791615419b024ba79edb296, type: 2}
