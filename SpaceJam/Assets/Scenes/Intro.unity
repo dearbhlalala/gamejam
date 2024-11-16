@@ -269,8 +269,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0177, y: 0}
-  m_SizeDelta: {x: 180.09, y: 100}
+  m_AnchoredPosition: {x: -1.5606, y: 0.00067361}
+  m_SizeDelta: {x: 183.56, y: 101.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1008374356
 GameObject:
@@ -310,14 +310,22 @@ PlayableDirector:
   m_ExposedReferences:
     m_References:
     - 70a97c45de06b294b9fa324521a2efa3: {fileID: 1628511299}
+    - e38bb943cf0eb8343bf6e683ac681d8a: {fileID: 421239834}
     - c781e05c08dcb0548a7d99f0e68bbf32: {fileID: 1803064891}
+    - 960af14813ccb5740811f45df6e82e19: {fileID: 421239834}
     - f58ba463ec475b04da7dda56ca5f9556: {fileID: 421239834}
+    - 42ff5ef2258b89b4a98c94253802e787: {fileID: 1754800611}
     - d47fafa212f58b3498aafe6ea90fc07c: {fileID: 0}
     - 3a41c2894e1f6ac48987b290b61a9be1: {fileID: 0}
     - c1bed75e4732fd24389aa3b79971157f: {fileID: 1416932589}
+    - b04dbfe9eb9cbd34cb2fdfef09cc8afa: {fileID: 1754800611}
     - 3f46bb207720101468d926b1245e6923: {fileID: 57071524}
     - 14e3118277194ea478068087ebd0a2ed: {fileID: 1754800611}
     - 1487882217e34864b8cf8fe3faf5e21e: {fileID: 421239834}
+    - abd18dea4aa9f584cabd55f038698b65: {fileID: 421239834}
+    - 9b113f81142618544a1cc9f44ef5a1a8: {fileID: 1754800611}
+    - 349906be93ab6b94d9eda8257fad18e7: {fileID: 421239834}
+    - 3946e2731fb3628448126cc9f02c68ab: {fileID: 1754800611}
     - 6d88b2acd9f5b4945950b60986738c65: {fileID: 421239834}
     - fb8ada8a4278dcd43915dad45e862129: {fileID: 1754800611}
     - 525686388d35b2541878eeb4557699c7: {fileID: 1112206733}
@@ -350,10 +358,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2560, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1090,8 +1098,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0177, y: 0}
-  m_SizeDelta: {x: 180.09, y: 100}
+  m_AnchoredPosition: {x: 0.2249, y: 0.0083011}
+  m_SizeDelta: {x: 182.0752, y: 101.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1803064891
 GameObject:
