@@ -5,6 +5,7 @@ public class StartGame : MonoBehaviour
 {
    public void LoadLevel(int index)
    {
+    Debug.Log("Loading Game...");
     SceneManager.LoadScene(index);
     }
 
