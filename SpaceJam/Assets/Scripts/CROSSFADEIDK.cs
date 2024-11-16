@@ -7,6 +7,7 @@ public class CROSSFADEIDK : MonoBehaviour
 {
     // Start is called before the first frame update
      public Animator transition;
+   
    public void LoadTheLevel(int index)
    {
     StartCoroutine(LoadNextLevel(SceneManager.GetActiveScene().buildIndex + 1));
