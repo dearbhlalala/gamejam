@@ -789,7 +789,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -272913681
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -2133,7 +2133,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -272913681
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -3082,41 +3082,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7698345882485366428, guid: 483dd5fb146b5974a95220280a10d28c, type: 3}
   m_PrefabInstance: {fileID: 54595568214161439}
   m_PrefabAsset: {fileID: 0}
---- !u!70 &2094831762
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094831755}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.005591155, y: -0.2431989}
-  m_Size: {x: 0.23862529, y: 0.08698903}
-  m_Direction: 1
 --- !u!95 &2094831763
 Animator:
   serializedVersion: 5
@@ -3218,6 +3183,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4514225293807576982, guid: 483dd5fb146b5974a95220280a10d28c, type: 3}
+      propertyPath: dashSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b71d4a6585bd41045825b1660c626671, type: 3}
+    - target: {fileID: 4514225293807576982, guid: 483dd5fb146b5974a95220280a10d28c, type: 3}
+      propertyPath: jumpSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ea87d615694af9747a7dcc51aaab69ab, type: 3}
     - target: {fileID: 4650646476644568495, guid: 483dd5fb146b5974a95220280a10d28c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.095
@@ -3351,9 +3324,6 @@ PrefabInstance:
     - {fileID: 8922118958640313424, guid: 483dd5fb146b5974a95220280a10d28c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7698345882485366428, guid: 483dd5fb146b5974a95220280a10d28c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2094831762}
     - targetCorrespondingSourceObject: {fileID: 7698345882485366428, guid: 483dd5fb146b5974a95220280a10d28c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2094831764}
