@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     #region COMPONENTS
     public Rigidbody2D RB { get; private set; }
+    Animator animator;
     //Script to handle all player animations, all references can be safely removed if you're importing into your own project.
     #endregion
 
@@ -32,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     //Jump
     private bool _isJumpCut;
     private bool _isJumpFalling;
+    bool isGrounded = false;
 
     //Wall Jump
     private float _wallJumpStartTime;
@@ -62,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform _frontWallCheckPoint;
     [SerializeField] private Transform _backWallCheckPoint;
     [SerializeField] private Vector2 _wallCheckSize = new Vector2(0.5f, 1f);
+    [SerializeField] private AudioClip jumpSoundClip;
+    [SerializeField] private AudioClip dashSoundClip;
     #endregion
 
     #region LAYERS & TAGS
@@ -72,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         RB = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -111,9 +117,17 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.K))
         {
+            AudioSource.PlayClipAtPoint(dashSoundClip, transform.position, 1f);
             OnDashInput();
         }
         #endregion
+
+        if (Input.GetButtonDown("Jump") && isGrounded) 
+        {
+            isGrounded = false;
+            animator.SetBool("InAir", !isGrounded);
+        }
+
 
         #region COLLISION CHECKS
         if (!IsDashing && !IsJumping)
@@ -147,6 +161,8 @@ public class PlayerMovement : MonoBehaviour
             IsJumping = false;
 
             _isJumpFalling = true;
+
+            animator.SetBool("InAir", !isGrounded);
         }
 
         if (LastOnGroundTime > 0 && !IsJumping)
@@ -266,6 +282,11 @@ public class PlayerMovement : MonoBehaviour
         //Handle Slide
         if (IsSliding)
             Slide();
+
+        animator.SetFloat("xVelocity", Math.Abs(RB.velocity.x));
+        animator.SetFloat("yVelocity", RB.velocity.y);
+
+
     }
 
     #region INPUT CALLBACKS
@@ -389,6 +410,7 @@ public class PlayerMovement : MonoBehaviour
         float force = Data.jumpForce;
         if (RB.velocity.y < 0)
             force -= RB.velocity.y;
+        AudioSource.PlayClipAtPoint(jumpSoundClip, transform.position, 1f);
 
         RB.AddForce(Vector2.up * force, ForceMode2D.Impulse);
         #endregion
@@ -518,6 +540,11 @@ public class PlayerMovement : MonoBehaviour
             return false;
     }
     #endregion
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        isGrounded = true;
+        animator.SetBool("InAir", !isGrounded);
+    }
 
 
     #region EDITOR METHODS
