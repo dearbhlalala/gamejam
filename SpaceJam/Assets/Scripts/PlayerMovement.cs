@@ -65,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform _frontWallCheckPoint;
     [SerializeField] private Transform _backWallCheckPoint;
     [SerializeField] private Vector2 _wallCheckSize = new Vector2(0.5f, 1f);
+    [SerializeField] private AudioClip jumpSoundClip;
+    [SerializeField] private AudioClip dashSoundClip;
     #endregion
 
     #region LAYERS & TAGS
@@ -115,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.K))
         {
+            AudioSource.PlayClipAtPoint(dashSoundClip, transform.position, 1f);
             OnDashInput();
         }
         #endregion
@@ -407,6 +410,7 @@ public class PlayerMovement : MonoBehaviour
         float force = Data.jumpForce;
         if (RB.velocity.y < 0)
             force -= RB.velocity.y;
+        AudioSource.PlayClipAtPoint(jumpSoundClip, transform.position, 1f);
 
         RB.AddForce(Vector2.up * force, ForceMode2D.Impulse);
         #endregion
