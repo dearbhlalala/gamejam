@@ -7,7 +7,7 @@ public class IntroDialogueNextScene : MonoBehaviour
 {
     void OnEnable()
     {
-        SceneManager.LoadScene("orbtest", LoadSceneMode.Single);
+        SceneManager.LoadScene("TJScene", LoadSceneMode.Single);
     }
     }
    
