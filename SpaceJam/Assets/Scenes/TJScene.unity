@@ -300,6 +300,7 @@ MonoBehaviour:
   door: {fileID: 125811147}
   messageText: {fileID: 0}
   messageBehavior: {fileID: 0}
+  orbSoundClip: {fileID: 8300000, guid: 36540db5cec91ab459389f20a79ee46a, type: 3}
 --- !u!58 &64589461
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1484,7 +1485,7 @@ Transform:
   m_GameObject: {fileID: 517451157}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.312375, y: 24.071198, z: -4.7366476}
+  m_LocalPosition: {x: 12.75181, y: 24.072098, z: -4.7366476}
   m_LocalScale: {x: 1.01, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11839,37 +11840,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8922118958640313424, guid: 483dd5fb146b5974a95220280a10d28c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1165825283}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 483dd5fb146b5974a95220280a10d28c, type: 3}
---- !u!1 &1165825282 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8922118958640313424, guid: 483dd5fb146b5974a95220280a10d28c, type: 3}
-  m_PrefabInstance: {fileID: 1165825281}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1165825283
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165825282}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 75ee50b743e15484998e2e965262da82, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1165825284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7844160555712226355, guid: 483dd5fb146b5974a95220280a10d28c, type: 3}
