@@ -18,8 +18,14 @@ EditorBuildSettings:
     path: Assets/Scenes/TJScene.unity
     guid: 9331506e5533b7a46975f990815050db
   - enabled: 1
-    path: Assets/Scenes/TJScene Level 1.unity
+    path: Assets/Scenes/TJSceneLevel1.unity
     guid: 704fcaf7a3b450c43b46c7befbf4b371
+  - enabled: 1
+    path: Assets/Scenes/TJSceneLevel2.unity
+    guid: 672406b8534828946aff329128635e92
+  - enabled: 1
+    path: Assets/Scenes/ENDINGTEST.unity
+    guid: 96848b22d6d937143af0bbf39c109690
   - enabled: 0
     path: Assets/Scenes/placholder scene.unity
     guid: 3253f7648e845ec44add52ea0c178736
