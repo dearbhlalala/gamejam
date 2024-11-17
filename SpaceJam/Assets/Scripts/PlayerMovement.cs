@@ -117,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.K))
         {
+            AudioSource.PlayClipAtPoint(dashSoundClip, transform.position, 1f);
             OnDashInput();
         }
         #endregion
