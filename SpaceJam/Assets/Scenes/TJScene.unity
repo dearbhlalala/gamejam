@@ -832,7 +832,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -860,7 +860,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -524.07764, y: -214.68237, z: 195.73987, w: 0}
+  m_margin: {x: -1555.9014, y: -278.92053, z: -795.9353, w: -967.5858}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1783,8 +1783,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Surely I won't be able to jump up here\u2026 perhaps I could use our wire
-    with LeftCtrl to grapple onto that gap\u2026?"
+  m_text: "Surely I won't be able to jump up here\u2026 \nperhaps I could use our
+    wire with \nLeftCtrl to grapple onto that gap\u2026?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aa7955b12791615419b024ba79edb296, type: 2}
   m_sharedMaterial: {fileID: -7011976685022766216, guid: aa7955b12791615419b024ba79edb296, type: 2}
@@ -1819,7 +1819,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1847,7 +1847,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -524.07764, y: -214.68237, z: 195.73987, w: 0}
+  m_margin: {x: -1551.8864, y: -278.92053, z: -807.97974, w: -963.57086}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -12429,7 +12429,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -12457,7 +12457,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -524.07764, y: -214.68237, z: 195.73987, w: 0}
+  m_margin: {x: -1551.8864, y: -278.92053, z: -803.96484, w: -967.5857}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -12913,7 +12913,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "I must remember how to dash past here\u2026 perhaps SHIFT will do the
+  m_text: "I must remember how to dash past here\u2026 \nperhaps SHIFT will do the
     trick?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aa7955b12791615419b024ba79edb296, type: 2}
@@ -12949,7 +12949,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -12977,7 +12977,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -524.07764, y: -214.68237, z: 195.73987, w: 0}
+  m_margin: {x: -1559.9163, y: -282.93542, z: -799.9502, w: -963.57086}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
